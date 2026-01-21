@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC CALCULATOR DISPLAY</title>
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center ; 
+            height: 100vh ;
+            font-family: Arial ;
+            background-color:  #f7f3f3;
+            
+            position: absolute ;
+            top: 39%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .box {
+            background-color: #4e5c86;
+            padding: 30px;
+            width: 400px;
+            border: 5px solid #2b3160;
+            border-radius: 15px; 
+            color: #f8f8f8;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class ="box" id="output"></div>
+
+    <script>
+
+        //String
+        let operation1 = "Addition";
+        let operation2 = "Subtraction";
+        let operation3 = "Multiplication";
+        let operation4 = "Division";
+
+       //Number
+       let number1 = 67 
+       let number2 = 13
+
+       //Formulas
+       let sum = (number1 + number2);
+       let diff = (number1 - number2);
+       let prod = (number1 * number2);
+       let quot = (number1 / number2);
+
+        document.getElementById("output").innerHTML =
+    "<h2> Basic Calculator Display </h2>" +
+    "<b>" + operation1 + "</b><br>" +
+     number1 + " + " + number2 + " = " + sum + "<br><br>" +
+    "<b>" + operation2 + "</b><br>" +
+     number1 + " - " + number2 + " = " + diff + "<br><br>" +
+    "<b>" + operation3 + "</b><br>" +
+     number1 + " * " + number2 + " = " + prod + "<br><br>" +
+    "<b>" + operation4 + "</b><br>" +
+     number1 + " / " + number2 + " = " + quot + "<br><br>" 
+
+    </script>
+</body>
